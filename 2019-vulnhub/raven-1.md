@@ -4,7 +4,7 @@
 ##### Level: Begginer.
 ##### Previous knowledge: basic linux, basic mysql, basic ethical hacking skills
 
-*Note:* Para espiar los resultados de cada acción, hacé click en la flecha y spoileate un poco :).
+*Note: Para espiar los resultados de cada acción, hacé click en la flecha y spoileate un poco :).*
 
 ## Walkthrough
 
