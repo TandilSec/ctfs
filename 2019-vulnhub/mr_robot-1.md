@@ -1,37 +1,40 @@
-# tandilsec_ctf_writeup
+# Vulnhub - Mr. Robot - 1
 
-CTF - Mr. Robot
+##### Type:
 
-Type:
+##### Level: beginner-intermediate.
 
-Level: beginner-intermediate.
+##### Previous knowledge:
 
-Previous knowledge:
+##### Meta: Encontrar 3 claves escondidas en diferentes locaciones
 
-Meta: Encontrar 3 claves escondidas en diferentes locaciones
-
-Note:
-
-# Walkthrough
+## Walkthrough
 
 Encontrar la IP de una maquina especifica dentro de una red (la IP comienza con 172.29.81...)
 
 Hacemos REQUESTS con Zaproxy (OWASP)
 
-Analizamos la direccion IP mediante NMap: Tiene activos los puertos 80 y 433, se trata de una Web. 
+Descubrimos que se trata de una Web
+
+<details> 
+    <summary>
+  Analizamos la direccion IP mediante NMap: Tiene activos los puertos 80 y 433 
+    </summary>
+</details>
+
 
 Al ingresar en el browser IP (http/172.29.81.94) nos devuelve flag1of3 (encontramos la 1er pista)
 
 Ahora debemos saber si se trata de un CMS
-Al agregar /wpadmin a la direccion descubrimos que se trata de un Wordpress
+Al agregar /wp-admin.php a la URL descubrimos que se trata de un Wordpress.
 
-Mediante http/172.29.81.94robots.txt llegamos a fsocity un diccionario
+Mediante http/172.29.81.94/robots.txt llegamos a fsociety un diccionario
 
 Descargamos el diccionario
-wget 172.29.81.94/fsocity.dicc
+wget 172.29.81.94/fsociety.dicc
 
 Removemos elementos duplicados
-/Documentos grep fsocity.dic sort-u
+/Documentos grep fsociety.dic sort-u
 
 Probamos como user de Wordpress cada campo del diccionario purgado (este paso conviene automatizarlo) : Si el user no existe 
 Wordpress tira un error, si el user existe Wordpress tira otro tipo diferente de error. (Brute Force Attack)
