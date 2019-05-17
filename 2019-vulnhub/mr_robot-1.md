@@ -20,24 +20,32 @@ Descubrimos que se trata de una Web (Analizamos la direccion IP mediante NMap: T
     <summary>
         Al ingresar en el browser la IP (http/172.29.81.94) nos devuelve la 1er pista
     </summary>
-    flag1of3
+    `flag1of3
 </details>
 
-
-Al ingresar en el browser la IP (http/172.29.81.94) nos devuelve flag1of3 (encontramos la 1er pista)
-
-
-
 Ahora debemos saber si se trata de un CMS
-Al agregar /wp-admin.php a la URL descubrimos que se trata de un Wordpress.
+<details> 
+    <summary>
+        Al agregar el path del Wordpress a la URL descubrimos que se trata de un WP.
+    </summary>
+    `http/172.29.81.94/wp-admin.php
+</details>
 
-Mediante http/172.29.81.94/robots.txt llegamos a fsociety un diccionario
+Mediante http/172.29.81.94/robots.txt llegamos a fsociety, un diccionario.
 
-Descargamos el diccionario
-wget 172.29.81.94/fsociety.dicc
+<details> 
+    <summary>
+        Descargamos el diccionario
+    </summary>
+    ` # wget 172.29.81.94/fsociety.dicc
+</details>
 
-Removemos elementos duplicados
-/Documentos grep fsociety.dic sort-u
+<details> 
+    <summary>
+        Removemos elementos duplicados
+    </summary>
+    ` # /Documentos grep fsociety.dic sort-u
+</details>
 
 Probamos como user de Wordpress cada campo del diccionario purgado (este paso conviene automatizarlo) : Si el user no existe 
 Wordpress tira un error, si el user existe Wordpress tira otro tipo diferente de error. (Brute Force Attack)
