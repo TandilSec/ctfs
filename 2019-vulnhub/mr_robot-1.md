@@ -22,7 +22,8 @@ Descubrimos que se trata de una Web (Analizamos la direccion IP mediante NMap: T
     <summary>
         Al ingresar en el browser la IP (http/172.29.81.94) nos devuelve la 1er pista
     </summary>
-    `flag1of3
+    
+`flag1of3`
 </details>
 
 Ahora debemos saber si se trata de un CMS
@@ -30,7 +31,8 @@ Ahora debemos saber si se trata de un CMS
     <summary>
         Al agregar el path del Wordpress a la URL descubrimos que se trata de un WP.
     </summary>
-    `http/172.29.81.94/wp-admin.php
+    
+`http/172.29.81.94/wp-admin.php`
 </details>
 
 Mediante http/172.29.81.94/robots.txt llegamos a fsociety, un diccionario.
@@ -39,14 +41,16 @@ Mediante http/172.29.81.94/robots.txt llegamos a fsociety, un diccionario.
     <summary>
         Descargamos el diccionario
     </summary>
-    ` # wget 172.29.81.94/fsociety.dicc
+    
+`# wget 172.29.81.94/fsociety.dicc`
 </details>
 
 <details> 
     <summary>
         Removemos elementos duplicados
     </summary>
-    ` # /Documentos grep fsociety.dic sort-u
+    
+` # /Documentos grep fsociety.dic sort-u`
 </details>
 
 Probamos como user de Wordpress cada campo del diccionario purgado (este paso conviene automatizarlo) : Si el user no existe 
