@@ -10,6 +10,8 @@
 
 ## Walkthrough
 
+####  Primer flag
+
 Encontrar la IP de una maquina especifica dentro de una red (la IP comienza con 172.29.81...)
 
 Hacemos REQUESTS con Zaproxy (OWASP)
@@ -52,4 +54,4 @@ Wordpress tira un error, si el user existe Wordpress tira otro tipo diferente de
 
 Para los users existentes probamos todos los campos de ese diccionario hasta dar con la password.
 
-# Herramientas utilizadas: nmap, zaproxy
+### Herramientas utilizadas: nmap, zaproxy
