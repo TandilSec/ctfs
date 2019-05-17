@@ -14,16 +14,19 @@ Encontrar la IP de una maquina especifica dentro de una red (la IP comienza con 
 
 Hacemos REQUESTS con Zaproxy (OWASP)
 
-Descubrimos que se trata de una Web
+Descubrimos que se trata de una Web (Analizamos la direccion IP mediante NMap: Tiene activos los puertos 80 y 433 )
 
 <details> 
     <summary>
-  Analizamos la direccion IP mediante NMap: Tiene activos los puertos 80 y 433 
+        Al ingresar en el browser la IP (http/172.29.81.94) nos devuelve la 1er pista
     </summary>
+    flag1of3
 </details>
 
 
-Al ingresar en el browser IP (http/172.29.81.94) nos devuelve flag1of3 (encontramos la 1er pista)
+Al ingresar en el browser la IP (http/172.29.81.94) nos devuelve flag1of3 (encontramos la 1er pista)
+
+
 
 Ahora debemos saber si se trata de un CMS
 Al agregar /wp-admin.php a la URL descubrimos que se trata de un Wordpress.
