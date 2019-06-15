@@ -1,0 +1,26 @@
+el codigo anda pero la imagen no se recupera
+
+una clase Paquete cuya estructura es un Vector de bytes
+Metodos: 
+public void agregarByte(byte b)
+public void borrar()
+public Vector<Byte> getElementos()
+public void repararPaquete(int fila, int columna)
+public final static Boolean getBit(byte byte_, int posicion)
+public final static byte setBit(int byte_,int posicion,boolean valor)
+
+una clase Imagen cuya estructura es un Vector de Paquetes 
+Metodos:
+public Imagen() // constructor: lee imagen_rota.png, genera los paquetes y los agrega al vector imagen
+public void guardaImagenNueva()
+public void imprimirEstructura()
+public Paquete getPaquete(int numero)
+
+una clase Diferencias que tiene como estructura un Vector de enteros
+Esta clase compara los valores de las paridades de la imagen correcta ("bits_paridad.txt") y de las paridades de la imagen_rota ("paridad_roto.txt") y se guardan el numero de paquete, la fila y la columna donde haya diferencias. Si no hay diferencia se guarda el valor -1.
+
+En el Main 
+- se crea una instancia de diferencias
+- se carga la imagen rota
+- se reparan los paquetes
+- se guarda la imagen nueva
